@@ -7,18 +7,15 @@ GAME_TABLE_ID_DESEJADO = "103910"
 # Armazena o último número conhecido
 ultimo_estado = None
 
-# Substitua "SEU_TOKEN_DE_AUTENTICACAO" pelo token de autenticação, se necessário.
-TOKEN_AUTENTICACAO = "SEU_TOKEN_DE_AUTENTICACAO"  # Se não precisar, deixe como None.
+# Substitua "SUA_API_KEY" pela sua chave API real
+API_KEY = "oe5tpRWNU6yS7ku3"
 
 def buscar_numero_unico():
     # Adiciona os cabeçalhos necessários
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36",
+        "Authorization": f"Bearer {API_KEY}"  # Inclui o cabeçalho de autenticação
     }
-
-    # Inclui o cabeçalho de autenticação, se necessário
-    if TOKEN_AUTENTICACAO:
-        headers["Authorization"] = f"Bearer {TOKEN_AUTENTICACAO}"
 
     try:
         response = requests.get(API_URL, headers=headers)
