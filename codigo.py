@@ -8,7 +8,7 @@ GAME_TABLE_ID_DESEJADO = "103910"
 ultimo_estado = None
 
 # Substitua "SUA_API_KEY" pela sua chave API real
-API_KEY = "oe5tpRWNU6yS7ku3"
+API_KEY = "SUA_API_KEY"
 
 def buscar_numero_unico():
     # Adiciona os cabeçalhos necessários
